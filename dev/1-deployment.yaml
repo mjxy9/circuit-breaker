@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: circuit-breaker
+  namespace: dev
+  labels:
+    app: circuit-breaker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: circuit-breaker
+  template:
+    metadata:
+      labels:
+        app: circuit-breaker
+    spec:
+      containers:
+        - name: circuit-breaker
+          image: mjxy9/circuit-breaker:v0.1.0
+          ports:
+            - containerPort: 8080
