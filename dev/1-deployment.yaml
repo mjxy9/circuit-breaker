@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: circuit-breaker
-          image: mjxy9/circuit-breaker:v0.1.1
+          image: mjxy9/circuit-breaker:v0.1.2
           ports:
             - containerPort: 8080
